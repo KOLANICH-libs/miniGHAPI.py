@@ -1,0 +1,16 @@
+name: CI
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: typical python workflow
+        uses: KOLANICH-GHActions/typical-python-workflow@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          should_isolate_testing: false

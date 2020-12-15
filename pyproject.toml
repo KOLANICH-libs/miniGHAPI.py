@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.2.0", "wheel", "setuptools_scm[toml]>=3.4.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "miniGHAPI"
+authors = [{name = "KOLANICH"}]
+description = "A small library for interacting with GitHub intended to be used in GitHub Actions implemented in python."
+readme = "ReadMe.md"
+keywords = ["miniGHAPI"]
+license = {text = "Unlicense"}
+classifiers = [
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Development Status :: 4 - Beta",
+	"Environment :: Other Environment",
+	"Intended Audience :: Developers",
+	"License :: Public Domain",
+	"Operating System :: OS Independent",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+]
+urls = {Homepage = "https://codeberg.org/KOLANICH-libs/miniGHAPI.py"}
+requires-python = ">=3.4"
+dependencies = [
+	"httpx" # @ git+https://github.com/encode/httpx.git
+]
+dynamic = ["version"]
+
+[tool.setuptools]
+zip-safe = true
+include-package-data = false
+
+[tool.setuptools.packages]
+find = {namespaces = false}
+
+[tool.setuptools_scm]

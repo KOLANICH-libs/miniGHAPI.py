@@ -1,0 +1,2 @@
+https://github.com/Ousret/charset_normalizer
+https://github.com/psf/requests
